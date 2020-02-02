@@ -1,0 +1,59 @@
+<div class="top-class">
+  <div class="form-class">
+    <form action="/top" method="POST">
+      <h2 class="page-header">Enter Your Favorite Language and Time</h2>
+      <label>Select Language</label>
+      <select name="language">
+        <option value="javascript">JavaScript</option>
+        <option value="python">python</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+        <option value="Go">Go</option>
+      </select>
+      <label>Select Time</label>
+      <select name="time">
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+      <button class="" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="top">
+    <div class="top-item">
+      <% names.forEach(element =>{ %>
+      <div class="top-item-hero">
+        <div class="top-item-name"><h2>Hello <%= element.name %></h2></div>
+        <div class="top-items top-item-image">
+          <img
+            src="<%= element.avatar %>"
+            class=""
+            alt=""
+            width="185px"
+            height="185px"
+          />
+        </div>
+      </div>
+      <div class="top-item-detail">
+        <div class="top-items top-item-author">
+          <p>Author: <strong> <%= element.author %></strong></p>
+        </div>
+        <div class="top-items">
+          <p>Description: <strong><%= element.description %></strong></p>
+        </div>
+        <div class="top-items">
+          <p>Stars: <strong><%= element.stars %></strong></p>
+        </div>
+        <div class="top-items">
+          <p>Forks: <strong><%= element.forks %></strong></p>
+        </div>
+        <div class="top-items top-item-url">
+          <a href="<%= element.url %>">Repo Link</a>
+        </div>
+        <br />
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>

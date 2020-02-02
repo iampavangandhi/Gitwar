@@ -1,0 +1,70 @@
+<div class="profile">
+  <div class="form">
+    <form action="/compare" method="POST">
+      <h2 class="page-header">Enter Your Github Username</h2>
+      <label>User1</label>
+      <input type="text" name="username1" value="" />
+      <br />
+      <label>User2</label>
+      <input type="text" name="username2" value="" />
+      <br />
+      <button class="" type="submit">Search</button>
+    </form>
+  </div>
+  <% if (userProfile1.score > userProfile2.score) { %> <% var x = "green"; var y
+  = "red" %> <% } %> <% if (userProfile1.score < userProfile2.score) { %> <% var
+  y = "red"; var x = "green" %> <% } %>
+  <div class="users">
+    <div class="user-profiles  <%= x %>">
+      <img
+        src="<%= userProfile1.avatar %>"
+        class="user-profile-image"
+        alt=""
+        width="140px"
+        height="140px"
+      />
+      <br />
+      <h3><%= userProfile1.username %></h3>
+      <%= userProfile1.name %>
+      <br />
+      Public Repos: <%= userProfile1.public_repos %>
+      <br />
+      Followers: <%= userProfile1.followers %>
+      <br />
+      <div id="score1" class="profile-score ">
+        Score: <%= userProfile1.score %>
+      </div>
+      <div class="padd"></div>
+      <a class="user-profile-link" href="<%= userProfile1.url %>"
+        >Link to Profile</a
+      >
+      <div class="padd"></div>
+    </div>
+    <div class="vs"><h1>V/S</h1></div>
+    <div class="user-profiles <%= y %> ">
+      <img
+        src="<%= userProfile2.avatar %>"
+        class="user-profile-image"
+        alt=""
+        width="140px"
+        height="140px"
+      />
+      <br />
+      <h3><%= userProfile2.username %></h3>
+      <%= userProfile2.name %>
+      <br />
+      Public Repos: <%= userProfile2.public_repos %>
+      <br />
+      Followers: <%= userProfile2.followers %>
+      <br />
+      <div id="score2" class="profile-score">
+        Score: <%= userProfile2.score %>
+      </div>
+      <div class="padd"></div>
+      <a class="user-profile-link" href="<%= userProfile2.url %>"
+        >Link to Profile</a
+      >
+      <div class="padd"></div>
+    </div>
+  </div>
+</div>
