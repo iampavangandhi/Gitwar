@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const bodyParser = require("body-parser");
@@ -24,6 +25,6 @@ app.use("/compare", compareRouter);
 app.use("/top", topRouter);
 app.use("/NULL", NullRouter);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("server is up");
 });
