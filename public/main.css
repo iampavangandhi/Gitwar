@@ -335,8 +335,13 @@ body {
     margin: 5px;
   }
 
+  .index,
+  .error {
+    width: 100%;
+  }
+
   .index-main-cards {
-    width: 95%;
+    width: 100%;
   }
 
   .index-item {
@@ -354,13 +359,6 @@ body {
     width: 90%;
     margin: 30px;
     margin-bottom: 75px;
-  }
-
-  .index {
-    width: 95%;
-  }
-  .error {
-    width: 95%;
   }
 
   .top-item {
