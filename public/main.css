@@ -276,6 +276,10 @@ body {
 .top-item-name {
   font-size: 1.2rem;
   text-transform: capitalize;
+  width: 350px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .top-item-url {
