@@ -1,4 +1,4 @@
-# Gitwar - Compete with Git :octocat:
+# Gitwar - Compete with Git
 ## Link : https://gitwar.herokuapp.com/
 
 ____________________________________________________________________________________
