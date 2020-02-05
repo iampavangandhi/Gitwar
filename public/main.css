@@ -355,6 +355,7 @@ body {
   .error {
     width: 95%;
     border: 10px var(--main-light-grey) solid;
+    border-top: 8px var(--main-light-grey) solid;
     border-bottom: 0;
   }
 
