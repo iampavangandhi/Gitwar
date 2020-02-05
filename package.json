@@ -1,12 +1,12 @@
 {
   "name": "gitwar",
   "version": "1.0.0",
-  "description": "gitwar",
+  "description": "gitwar - compete with git",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Pavan Gandhi",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
