@@ -354,7 +354,7 @@ body {
   .index,
   .error {
     width: 95%;
-    border: 5px var(--main-bg-color) solid;
+    border: 5px var(--main-light-grey) solid;
     border-bottom: 0;
   }
 
