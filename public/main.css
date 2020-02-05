@@ -354,13 +354,13 @@ body {
   .index,
   .error {
     width: 95%;
-    border: 5px var(--main-light-grey) solid;
+    border: 10px var(--main-light-grey) solid;
     border-bottom: 0;
   }
 
   .index-main-cards {
     width: 95%;
-    border: 5px var(--main-light-grey) solid;
+    border: 10px var(--main-light-grey) solid;
     border-top: 0;
   }
 
