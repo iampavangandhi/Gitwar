@@ -14,6 +14,7 @@ body {
 :root {
   --main-bg-color: #2948ff;
   --main-bg-color-2: #0575e6;
+  --main-bg-gradient: linear-gradient(to right, #00c6ff, #0072ff);
   --main-user-bg: rgb(231, 228, 228);
   --main-light-grey: lightgrey;
   --main-error-color: crimson;
@@ -86,7 +87,7 @@ body {
 .index-main-cards {
   width: 60%;
   padding: 20px, 30px;
-  background-color: var(--main-bg-color);
+  background: var(--main-bg-gradient);
 }
 
 .index-item:hover {
@@ -102,7 +103,7 @@ body {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  background-color: var(--main-bg-color);
+  background: var(--main-bg-gradient);
 }
 
 .error {
@@ -275,13 +276,12 @@ body {
 .top-item {
   padding: 25px;
   width: 60%;
-  background-color: var(--main-bg-color);
+  background: var(--main-bg-gradient);
   margin-bottom: 50px;
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border: 5px var(--main-light-grey) solid;
   box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
 }
 
@@ -296,7 +296,7 @@ body {
   padding: 8px;
   font-size: 1.3rem;
   border-radius: 5%;
-  background-color: var(--main-bg-color);
+  background: var(--main-bg-gradient);
   border: var(--main-black-color) 2px solid;
   box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
 }
@@ -354,20 +354,10 @@ body {
   .index,
   .error {
     width: 100%;
-    /* border: 8px var(--main-light-grey) solid;
-    border-top: 8px var(--main-light-grey) solid;
-    border-bottom: 0; */
-  }
-
-  .index {
-    background: linear-gradient(to right, #00c6ff, #0072ff);
   }
 
   .index-main-cards {
     width: 100%;
-    /* border: 8px var(--main-light-grey) solid;
-    border-top: 0; */
-    background: linear-gradient(to right, #00c6ff, #0072ff);
   }
 
   .index-item {
