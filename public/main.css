@@ -354,15 +354,20 @@ body {
   .index,
   .error {
     width: 95%;
-    border: 10px var(--main-light-grey) solid;
+    border: 8px var(--main-light-grey) solid;
     border-top: 8px var(--main-light-grey) solid;
     border-bottom: 0;
   }
 
+  .index {
+    background-color: var(--main-user-bg);
+  }
+
   .index-main-cards {
     width: 95%;
-    border: 10px var(--main-light-grey) solid;
+    border: 8px var(--main-light-grey) solid;
     border-top: 0;
+    background-color: var(--main-user-bg);
   }
 
   .index-item {
