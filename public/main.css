@@ -360,14 +360,16 @@ body {
   }
 
   .index {
-    background-color: var(--main-user-bg);
+    background-color: linear-gradient(to right, #43cea2, #185a9d);
   }
 
   .index-main-cards {
     width: 95%;
     border: 8px var(--main-light-grey) solid;
     border-top: 0;
-    background-color: var(--main-user-bg);
+    /* background-color: blue; */
+    background-color: linear-gradient(to right, #43cea2, #185a9d);
+    background-color: linear-gradient(to right, #00c6ff, #0072ff);
   }
 
   .index-item {
