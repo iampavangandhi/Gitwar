@@ -353,23 +353,21 @@ body {
 
   .index,
   .error {
-    width: 95%;
-    border: 8px var(--main-light-grey) solid;
+    width: 100%;
+    /* border: 8px var(--main-light-grey) solid;
     border-top: 8px var(--main-light-grey) solid;
-    border-bottom: 0;
+    border-bottom: 0; */
   }
 
   .index {
-    background-color: linear-gradient(to right, #43cea2, #185a9d);
+    background: linear-gradient(to right, #00c6ff, #0072ff);
   }
 
   .index-main-cards {
-    width: 95%;
-    border: 8px var(--main-light-grey) solid;
-    border-top: 0;
-    /* background-color: blue; */
-    background-color: linear-gradient(to right, #43cea2, #185a9d);
-    background-color: linear-gradient(to right, #00c6ff, #0072ff);
+    width: 100%;
+    /* border: 8px var(--main-light-grey) solid;
+    border-top: 0; */
+    background: linear-gradient(to right, #00c6ff, #0072ff);
   }
 
   .index-item {
