@@ -5,7 +5,7 @@
 ### Github Trending Api Used [Link](https://github.com/huchenme/github-trending-api)
 
 ### Features
-  - Check your Profile Score
+  - Check your Github Score
   - Compete with Others
   - View Top Trending Repos
 
