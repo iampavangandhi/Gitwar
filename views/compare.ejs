@@ -2,20 +2,35 @@
   <div class="form">
     <form action="/compare" method="POST">
       <h2 class="page-header">Enter Your Github Username</h2>
-      <label>User1</label>
-      <input type="text" name="username1" value="" />
+      <input
+        style="width: 60%;"
+        type="text"
+        name="username1"
+        placeholder="username 1"
+        value=""
+      />
+      <input
+        style="width: 60%;"
+        type="text"
+        name="username2"
+        placeholder="username 2"
+        value=""
+      />
       <br />
-      <label>User2</label>
-      <input type="text" name="username2" value="" />
-      <br />
-      <button class="" type="submit">Submit</button>
+      <button
+        style="width: 55%; margin-top: 7px; border-radius: 3%;"
+        class=""
+        type="submit"
+      >
+        Submit
+      </button>
     </form>
   </div>
   <% if (userProfile1.score > userProfile2.score) { %> <% var x = "green"; var y
   = "red" %> <% } %> <% if (userProfile1.score < userProfile2.score) { %> <% var
   x = "red"; var y = "green" %> <% } %>
   <div class="users">
-    <div class="user-profiles  <%= x %>">
+    <div class="user-profiles <%= x %>">
       <img
         src="<%= userProfile1.avatar %>"
         class="user-profile-image"
@@ -31,7 +46,7 @@
       <br />
       Followers: <%= userProfile1.followers %>
       <br />
-      <div id="score1" class="profile-score ">
+      <div id="score1" class="profile-score">
         Score: <%= userProfile1.score %>
       </div>
       <div class="padd"></div>
@@ -41,7 +56,7 @@
       <div class="padd"></div>
     </div>
     <div class="vs"><h1>V/S</h1></div>
-    <div class="user-profiles <%= y %> ">
+    <div class="user-profiles <%= y %>">
       <img
         src="<%= userProfile2.avatar %>"
         class="user-profile-image"

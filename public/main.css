@@ -29,10 +29,75 @@ body {
   --box-shadow-red: rgba(202, 30, 30, 0.25);
 }
 
+select {
+  font-size: 16px;
+  padding: 6px 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+}
+
+button {
+  color: white;
+  background-color: var(--main-bg-color);
+
+  font-size: 16px;
+  padding: 6px 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 5%;
+  border: 1px solid transparent;
+}
+
+button:focus,
+button:active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+button:hover,
+button:focus {
+  text-decoration: none;
+}
+button:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
 .header {
   height: 75px;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   background-color: var(--main-bg-color);
   display: flex;
   align-items: center;
