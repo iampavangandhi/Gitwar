@@ -29,6 +29,12 @@ body {
   --box-shadow-red: rgba(202, 30, 30, 0.25);
 }
 
+input {
+  font-size: 16px;
+  width: 55%;
+  padding: 6px 12px;
+}
+
 select {
   font-size: 16px;
   padding: 6px 12px;
