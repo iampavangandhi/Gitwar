@@ -19,7 +19,7 @@ body {
   --main-light-grey: lightgrey;
   --main-error-color: crimson;
   --main-black-color: black;
-  --main-white-color: white;
+  --main-white-color: #f7f8fc;
   --main-green-color: green;
   --main-grey-color: grey;
   --main-blue-color: var(--main-bg-color);
@@ -103,7 +103,7 @@ button:active {
 .header {
   height: 75px;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   background-color: var(--main-bg-color);
   display: flex;
   align-items: center;
@@ -209,7 +209,11 @@ button:active {
 }
 
 .padd {
-  padding: 15px;
+  padding: 12px;
+}
+
+.padd-mob {
+  padding: 35px;
 }
 
 .index-items {
@@ -302,7 +306,7 @@ button:active {
   width: 20%;
   border-radius: 5%;
   background-color: var(--main-user-bg);
-  box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
+  box-shadow: 0 10px 20px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
   border: var(--main-grey-color) 2px solid;
   text-align: center;
 }
@@ -316,19 +320,23 @@ button:active {
 }
 
 .user-profile-link {
-  padding: 6px;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  font-size: 16px;
+  padding: 6px 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-decoration: none;
+  display: inline-block;
   color: var(--main-white-color);
+
   border-radius: 5%;
+  cursor: pointer;
+  color: white;
   background-color: var(--main-bg-color);
-  border: var(--main-bg-color) 1px solid;
-  box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
+  box-shadow: 0 10px 20px var(--box-shadow-1), 0 4px 4px var(--box-shadow-2);
 }
 
 .user-profile-link:hover {
-  padding: 8px;
+  padding: 8px 16px;
 }
 
 .form-class {
@@ -413,8 +421,33 @@ button:active {
 
 /* Media Query */
 @media screen and (max-width: 800px) {
+  .index h1 {
+    color: var(--main-black-color);
+    padding: 0;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  .index h2 {
+    color: var(--main-black-color);
+    font-size: 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 10px;
+  }
+
   .footer {
     height: 30px;
+    background-color: #f7f8fc;
+  }
+
+  .padd-mob {
+    padding: 0px;
+  }
+
+  button {
+    background-color: var(--main-bg-color-2);
   }
 
   .gitwar,
@@ -434,6 +467,7 @@ button:active {
   .index-item {
     width: 60%;
     margin: 10px;
+    margin-bottom: 25px;
   }
 
   .user-profile {
@@ -446,6 +480,11 @@ button:active {
     width: 90%;
     margin: 30px;
     margin-bottom: 75px;
+  }
+
+  .user-profile-link {
+    background-color: var(--main-bg-color-2);
+    border-radius: 2%;
   }
 
   .top-item {

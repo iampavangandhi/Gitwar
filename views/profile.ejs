@@ -17,17 +17,17 @@
     />
     <br />
     <h3><%= userProfile.username %></h3>
-    <%= userProfile.name %>
+    <%= userProfile.name != "NULL" ? userProfile.name : "Display Name: NULL" %>
     <br />
     Public Repos: <%= userProfile.public_repos %>
+    <br />
+    Stars on Repos: <%= userProfile.repo_stars %>
     <br />
     Followers: <%= userProfile.followers %>
     <br />
     Score: <%= userProfile.score %>
     <div class="padd"></div>
-    <a class="user-profile-link" href="<%= userProfile.url %>"
-      >Link to Profile</a
-    >
+    <a class="user-profile-link" href="<%= userProfile.url %>">Profile Link</a>
     <div class="padd"></div>
   </div>
 </div>
