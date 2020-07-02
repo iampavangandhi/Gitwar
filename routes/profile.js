@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
   const username = req.body.username.toString();
   const profile = await getProfile(username);
   if (profile == "error") {
-    res.render("error");
+    res.status(404).render("error");
   }
   const userProfile = {
     avatar: profile.avatar,

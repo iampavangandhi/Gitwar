@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
   const profile2 = await getProfile(user2);
 
   if (profile1 == "error" || profile2 == "error") {
-    res.render("error");
+    res.status(404).render("error");
   }
   const userProfile1 = {
     avatar: profile1.avatar,
