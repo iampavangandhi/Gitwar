@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
     .get(
       `https://github-trending-api.now.sh/repositories?language=javascript&since=monthly&spoken_language_code=english`
     )
-    .then(async function(response) {
+    .then(async function (response) {
       let index = 0;
       let names = [];
       response.data.map(function await(elem) {
@@ -18,13 +18,13 @@ router.get("/", (req, res) => {
           url: elem.url,
           description: elem.description,
           stars: elem.stars,
-          forks: elem.forks
+          forks: elem.forks,
         };
         index++;
       });
-      await res.render("top", { names: names });
+      res.status(200).render("top", { names: names });
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 });
 
 router.post("/", (req, res) => {
@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
     .get(
       `https://github-trending-api.now.sh/repositories?language=${req.body.language}&since=${req.body.time}&spoken_language_code=english`
     )
-    .then(async function(response) {
+    .then(async function (response) {
       let index = 0;
       let names = [];
       response.data.map(function await(elem) {
@@ -43,13 +43,13 @@ router.post("/", (req, res) => {
           url: elem.url,
           description: elem.description,
           stars: elem.stars,
-          forks: elem.forks
+          forks: elem.forks,
         };
         index++;
       });
-      await res.render("top", { names: names });
+      res.status(200).render("top", { names: names });
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 });
 
 module.exports = router;

@@ -3,7 +3,6 @@ const dotenv = require("dotenv");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const bodyParser = require("body-parser");
-const axios = require("axios");
 
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");

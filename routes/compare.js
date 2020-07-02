@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
     public_repos: "NULL",
     followers: "NULL",
     score: "NULL",
-    url: "NULL"
+    url: "NULL",
   };
   const userProfile2 = {
     avatar: "./manicon.jpeg",
@@ -20,11 +20,11 @@ router.get("/", (req, res) => {
     public_repos: "NULL",
     followers: "NULL",
     score: "NULL",
-    url: "NULL"
+    url: "NULL",
   };
-  res.render("compare", {
+  res.status(200).render("compare", {
     userProfile1: userProfile1,
-    userProfile2: userProfile2
+    userProfile2: userProfile2,
   });
 });
 
@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
   const profile2 = await getProfile(user2);
 
   if (profile1 == "error" || profile2 == "error") {
-    await res.render("error");
+    res.render("error");
   }
   const userProfile1 = {
     avatar: profile1.avatar,
@@ -44,7 +44,7 @@ router.post("/", async (req, res) => {
     public_repos: profile1.public_repos,
     followers: profile1.followers,
     score: profile1.score,
-    url: profile1.url
+    url: profile1.url,
   };
   const userProfile2 = {
     avatar: profile2.avatar,
@@ -53,11 +53,11 @@ router.post("/", async (req, res) => {
     public_repos: profile2.public_repos,
     followers: profile2.followers,
     score: profile2.score,
-    url: profile2.url
+    url: profile2.url,
   };
-  await res.render("compare", {
+  res.status(200).render("compare", {
     userProfile1: userProfile1,
-    userProfile2: userProfile2
+    userProfile2: userProfile2,
   });
 });
 

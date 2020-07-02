@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const axios = require("axios");
 const getProfile = require("./calc");
 
 router.get("/", (req, res) => {
@@ -11,16 +10,16 @@ router.get("/", (req, res) => {
     public_repos: "NULL",
     followers: "NULL",
     score: "NULL",
-    url: "NULL"
+    url: "NULL",
   };
-  res.render("profile", { userProfile: userProfile });
+  res.status(200).render("profile", { userProfile: userProfile });
 });
 
 router.post("/", async (req, res) => {
   const username = req.body.username.toString();
   const profile = await getProfile(username);
   if (profile == "error") {
-    await res.render("error");
+    res.render("error");
   }
   const userProfile = {
     avatar: profile.avatar,
@@ -29,9 +28,9 @@ router.post("/", async (req, res) => {
     public_repos: profile.public_repos,
     followers: profile.followers,
     score: profile.score,
-    url: profile.url
+    url: profile.url,
   };
-  await res.render("profile", { userProfile: userProfile });
+  res.status(200).render("profile", { userProfile: userProfile });
 });
 
 module.exports = router;
