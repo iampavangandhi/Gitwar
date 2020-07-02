@@ -1,12 +1,31 @@
-# Gitwar - Compete with Git
+<div align="center">
+
+![logo](logo.png)
+
+# **Gitwar - Compete with Git**
 ## Link : https://gitwar.herokuapp.com/
 
 ### Special Thanks to [Huchenme](https://github.com/huchenme)
 ### Github Trending Api Used [Link](https://github.com/huchenme/github-trending-api)
 
-### Features
-  - Check your Github Score
-  - Compete with Others
-  - View Top Trending Repos
+---
 
-____________________________________________________________________________________
+</div>
+
+## Screenshots
+
+<div align="center">
+
+![SS1](SS1.png)
+
+</div>
+
+## Features
+
+- Check your Github Score. Based on -
+  -  Your Public Repos
+  -  Stars on Public Repos
+  -  Github Followers
+- Compete with Friends and Other Github Users
+- View Trending Repos of 5 Different Languages
+
