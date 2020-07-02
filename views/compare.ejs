@@ -3,7 +3,7 @@
     <form action="/compare" method="POST">
       <h2 class="page-header">Enter Your Github Username</h2>
       <input
-        style="width: 60%;"
+        style="width: 60%; margin-bottom: 3px;"
         type="text"
         name="username1"
         placeholder="username 1"
@@ -49,7 +49,11 @@
       <br />
       Followers: <%= userProfile1.followers %>
       <br />
-      <div id="score1" class="profile-score">
+      <div
+        id="score1"
+        class="profile-score"
+        style="font-weight: 600; font-size: large;"
+      >
         Score: <%= userProfile1.score %>
       </div>
       <div class="padd"></div>
@@ -78,7 +82,11 @@
       <br />
       Followers: <%= userProfile2.followers %>
       <br />
-      <div id="score2" class="profile-score">
+      <div
+        id="score2"
+        class="profile-score"
+        style="font-weight: 600; font-size: large;"
+      >
         Score: <%= userProfile2.score %>
       </div>
       <div class="padd"></div>

@@ -15,12 +15,12 @@ body {
   --main-bg-color: #2948ff;
   --main-bg-color-2: #0575e6;
   --main-bg-gradient: linear-gradient(to right, #00c6ff, #0072ff);
-  --main-user-bg: #eeeeee;
+  --main-user-bg: #f8f8f8ec;
   --main-light-grey: lightgrey;
-  --main-error-color: crimson;
+  --main-error-color: #d9534f;
   --main-black-color: black;
-  --main-white-color: #f7f8fc;
-  --main-green-color: green;
+  --main-white-color: #eeeeee;
+  --main-green-color: #5cb85c;
   --main-grey-color: grey;
   --main-blue-color: var(--main-bg-color);
   --box-shadow-1: rgba(0, 0, 0, 0.25);
@@ -226,7 +226,7 @@ button:active {
 .index-item {
   width: 20%;
   padding: 30px;
-  border-radius: 5%;
+  border-radius: 6%;
   border: var(--main-black-color) 3px solid;
   box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
 }
@@ -278,7 +278,7 @@ button:active {
 .user-profiles {
   height: 30%;
   width: 20%;
-  border-radius: 5%;
+  border-radius: 6%;
   background-color: var(--main-user-bg);
   box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
   border: var(--main-grey-color) 2px solid;
@@ -289,14 +289,12 @@ button:active {
   border: var(--main-green-color) 5px solid;
   box-shadow: 0 14px 28px var(--box-shadow-green),
     0 10px 10px var(--box-shadow-green);
-  width: 25%;
 }
 
 .red {
   border: var(--main-error-color) 5px solid;
   box-shadow: 0 14px 28px var(--box-shadow-red),
     0 10px 10px var(--box-shadow-red);
-  width: 15%;
 }
 
 .user-profile {
@@ -304,7 +302,7 @@ button:active {
   padding: 0;
   height: 30%;
   width: 20%;
-  border-radius: 5%;
+  border-radius: 6%;
   background-color: var(--main-user-bg);
   box-shadow: 0 10px 20px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
   border: var(--main-grey-color) 2px solid;
