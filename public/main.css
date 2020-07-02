@@ -446,6 +446,11 @@ button:active {
     padding: 0px;
   }
 
+  .vs {
+    font-size: 1.5rem;
+    color: var(--main-bg-color-2);
+  }
+
   button {
     background-color: var(--main-bg-color-2);
   }
@@ -471,15 +476,15 @@ button:active {
   }
 
   .user-profile {
-    width: 65%;
+    width: 75%;
     margin: 30px;
     margin-bottom: 75px;
   }
 
   .user-profiles {
     width: 90%;
-    margin: 30px;
-    margin-bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 70px;
   }
 
   .user-profile-link {
