@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "devStart": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "author": "Pavan Gandhi",
   "license": "ISC",
