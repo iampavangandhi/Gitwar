@@ -26,7 +26,7 @@
 
 ## Local Setup
 
-```bash
+```sh
 # install dependencies
 npm install
 
