@@ -51,4 +51,8 @@ npm run dev
 - Github API
 - Heroku for deployment
 
+## License
+
+[MIT](LICENSE) © Pavan Gandhi
+
 ### Connect me on [Linkedin](https://www.linkedin.com/in/iampavangandhi/) and Follow on [Github](https://github.com/iampavangandhi).
