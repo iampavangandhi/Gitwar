@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
     public_repos: "NULL",
     repo_stars: "NULL",
     followers: "NULL",
+    user_orgs: "NULL",
     score: "NULL",
     url: "NULL",
   };
@@ -23,6 +24,7 @@ router.get("/", (req, res) => {
     public_repos: "NULL",
     repo_stars: "NULL",
     followers: "NULL",
+    user_orgs: "NULL",
     score: "NULL",
     url: "NULL",
   };
@@ -54,6 +56,7 @@ router.post("/", async (req, res) => {
     public_repos: profile1.public_repos,
     repo_stars: profile1.repo_stars,
     followers: profile1.followers,
+    user_orgs: profile1.user_orgs,
     score: profile1.score,
     url: profile1.url,
   };
@@ -65,6 +68,7 @@ router.post("/", async (req, res) => {
     public_repos: profile2.public_repos,
     repo_stars: profile2.repo_stars,
     followers: profile2.followers,
+    user_orgs: profile2.user_orgs,
     score: profile2.score,
     url: profile2.url,
   };

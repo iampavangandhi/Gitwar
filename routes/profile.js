@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
     public_repos: "NULL",
     repo_stars: "NULL",
     followers: "NULL",
+    user_orgs: "NULL",
     score: "NULL",
     url: "NULL",
   };
@@ -36,6 +37,7 @@ router.post("/", async (req, res) => {
     public_repos: profile.public_repos,
     repo_stars: profile.repo_stars,
     followers: profile.followers,
+    user_orgs: profile.user_orgs,
     score: profile.score,
     url: profile.url,
   };

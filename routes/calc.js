@@ -10,6 +10,7 @@ module.exports = async function getProfile(username) {
     .then(async function (response) {
       const score = await calc(response.data);
       const repo_stars = await repoStars(response.data.login);
+      const user_orgs = await userOrgs(response.data.login);
 
       let myProfile = {
         avatar: response.data.avatar_url,
@@ -18,6 +19,7 @@ module.exports = async function getProfile(username) {
         public_repos: response.data.public_repos,
         repo_stars: repo_stars,
         followers: response.data.followers,
+        user_orgs: user_orgs,
         score: score,
         url: response.data.html_url,
       };
@@ -35,15 +37,28 @@ module.exports = async function getProfile(username) {
 async function calc(profile) {
   const star = await staredRepos(profile.login);
   const stars = parseInt(star) * 5;
+  const org = await userOrgs(profile.login);
+  const orgs = parseInt(org) * 50;
   const public_repos = parseInt(profile.public_repos) * 10;
   const public_gists = parseInt(profile.public_gists) * 5;
   const repo_stars = await repoStars(profile.login);
   const repo_stars_score = repo_stars * 5;
   const followers = parseInt(profile.followers) * 15;
   const score =
-    stars + public_repos + public_gists + followers + repo_stars_score;
+    stars + orgs + public_repos + public_gists + followers + repo_stars_score;
 
   return score;
+}
+
+// Calculate Orgs
+async function userOrgs(profile) {
+  const orgs = await axios
+    .get(`https://api.github.com/users/${profile}/orgs`)
+    .then(function (res) {
+      return res.data.length;
+    })
+    .catch((err) => console.log(err));
+  return orgs;
 }
 
 // Calculate Stared Repos

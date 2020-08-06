@@ -6,7 +6,7 @@
       <button class="" type="submit">Search</button>
     </form>
   </div>
-
+  <div class="padd"></div>
   <div class="user-profile">
     <img
       src="<%= userProfile.avatar %>"
@@ -23,7 +23,10 @@
     <br />
     Stars on Repos: <%= userProfile.repo_stars %>
     <br />
-    Followers: <%= userProfile.followers %>
+    Github Followers: <%= userProfile.followers %>
+    <br />
+    Joined Organisations: <%= userProfile.user_orgs %>
+    <br />
     <br />
     <div class="div" style="font-weight: 600; font-size: large;">
       Score: <%= userProfile.score %>
