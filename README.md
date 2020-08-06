@@ -1,6 +1,6 @@
 <div align="center">
 
-![logo](logo.png)
+![logo](./public/logo.png)
 
 # **Gitwar - Compete with Git**
 
@@ -20,7 +20,7 @@
 
 <div align="center">
 
-![SS](SS.png)
+![Screenshot](./public/Screenshot.png)
 
 </div>
 

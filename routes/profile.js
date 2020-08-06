@@ -1,6 +1,8 @@
+// Profile Route
+
 const express = require("express");
 const router = express.Router();
-const getProfile = require("./calc");
+const getProfile = require("../helper/calc");
 
 router.get("/", (req, res) => {
   const userProfile = {

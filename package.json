@@ -2,13 +2,28 @@
   "name": "gitwar",
   "version": "1.0.2",
   "description": "gitwar - compete with git",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iampavangandhi/Gitwar.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "github",
+    "github-api",
+    "github-profile"
+  ],
   "author": "Pavan Gandhi",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iampavangandhi/Gitwar/issues"
+  },
+  "homepage": "https://github.com/iampavangandhi/Gitwar#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
