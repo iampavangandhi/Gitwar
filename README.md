@@ -12,9 +12,29 @@
 
 </div>
 
-## Add Gitwar Score to GitHub profile README
+<br />
 
-> ### Powered by [Shield.io](https://shields.io/)
+# Gitwar WebApp
+
+> ### Website : https://gitwar.herokuapp.com/
+
+## Features
+
+- Check your Github Score. Based on -
+  - Your Public Repos
+  - Stars on Public Repos
+  - Forks on Public Repos
+  - Github Followers
+  - Joined Github Organisations
+- Compete with Friends and Other Github Users
+- View Trending Repos of 5 Different Languages
+
+
+# Gitwar Score in README
+
+> ### Add Gitwar Score to GitHub Profile README
+> ### Badges are Powered by [Shield.io](https://shields.io/)
+> ### Check `helper/calc.js` to Know How Gitwar Score is Calculated
 
 You need to add this in README.md file in your profile repository via Markdown syntax:
 
@@ -99,17 +119,6 @@ npm start
 # serve with hot reload at localhost:3000
 npm run dev
 ```
-
-## Features
-
-- Check your Github Score. Based on -
-  - Your Public Repos
-  - Stars on Public Repos
-  - Forks on Public Repos
-  - Github Followers
-  - Joined Github Organisations
-- Compete with Friends and Other Github Users
-- View Trending Repos of 5 Different Languages
 
 ## Tech Stack
 
