@@ -13,7 +13,7 @@ router.get("/:username", async (req, res) => {
   const profile = await getProfile(username);
 
   if (profile == "error") {
-    return res.status(404).json({ error: "NOT FOUND" });
+    return res.status(404).json({ score: "NULL", error: "NOT FOUND" });
   }
 
   res.status(200).json({

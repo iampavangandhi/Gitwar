@@ -15,11 +15,13 @@ body {
   --main-bg-color: #2948ff;
   --main-bg-color-2: #0575e6;
   --main-bg-gradient: linear-gradient(to right, #00c6ff, #0072ff);
+  --main-bg-gradient-2: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   --main-user-bg: #f8f8f8ec;
   --main-light-grey: lightgrey;
   --main-error-color: #d9534f;
   --main-black-color: black;
-  --main-white-color: #eeeeee;
+  --main-white: white;
+  --main-white-color: #eeeeeef5;
   --main-green-color: #5cb85c;
   --main-grey-color: grey;
   --main-blue-color: var(--main-bg-color);
@@ -57,7 +59,7 @@ select {
 }
 
 button {
-  color: white;
+  color: var(--main-white);
   background-color: var(--main-bg-color);
   font-size: 16px;
   padding: 6px 12px;
@@ -106,7 +108,7 @@ button:active {
   height: 75px;
   width: 100%;
   margin-bottom: 15px;
-  background-color: var(--main-bg-color);
+  background: var(--main-bg-gradient-2);
   display: flex;
   align-items: center;
 }
@@ -332,7 +334,7 @@ button:active {
 
   border-radius: 5%;
   cursor: pointer;
-  color: white;
+  color: var(--main-white);
   background-color: var(--main-bg-color);
   box-shadow: 0 10px 20px var(--box-shadow-1), 0 4px 4px var(--box-shadow-2);
 }
@@ -441,11 +443,12 @@ button:active {
 
   .header {
     margin-bottom: 10px;
+    background: var(--main-bg-color);
   }
 
   .footer {
     position: static;
-    background-color: white;
+    background-color: var(--main-white);
   }
 
   .padd-mob {
