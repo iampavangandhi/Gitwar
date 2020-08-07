@@ -8,10 +8,6 @@
 
 ## Website : https://gitwar.herokuapp.com/
 
-### Special Thanks to [Huchenme](https://github.com/huchenme) for the
-
-### Github Trending Api: [Link](https://github.com/huchenme/github-trending-api)
-
 ---
 
 </div>
@@ -39,7 +35,9 @@ npm run dev
 - Check your Github Score. Based on -
   - Your Public Repos
   - Stars on Public Repos
+  - Forks on Public Repos
   - Github Followers
+  - Joined Github Organisations
 - Compete with Friends and Other Github Users
 - View Trending Repos of 5 Different Languages
 
@@ -50,6 +48,10 @@ npm run dev
 - EJS (Template Engine)
 - Github API
 - Heroku for deployment
+
+## API Credits
+
+### Special Thanks to [Huchenme](https://github.com/huchenme) for the [Github Trending Api](https://github.com/huchenme/github-trending-api)
 
 ## License
 

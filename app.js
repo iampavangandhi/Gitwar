@@ -22,6 +22,7 @@ app.use(express.static("public"));
 const indexRouter = require("./routes/index");
 const profileRouter = require("./routes/profile");
 const compareRouter = require("./routes/compare");
+const apiRouter = require("./routes/api");
 const topRouter = require("./routes/top");
 const NullRouter = require("./routes/null");
 
@@ -29,6 +30,7 @@ const NullRouter = require("./routes/null");
 app.use("/", indexRouter);
 app.use("/profile", profileRouter);
 app.use("/compare", compareRouter);
+app.use("/api", apiRouter);
 app.use("/top", topRouter);
 app.use("/NULL", NullRouter);
 

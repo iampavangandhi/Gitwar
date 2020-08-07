@@ -1,7 +1,5 @@
 // Calculate Score
 
-const express = require("express");
-const router = express.Router();
 const axios = require("axios");
 
 // Get Profile
@@ -12,6 +10,7 @@ module.exports = async function getProfile(username) {
     .then(async function (response) {
       const score = await calc(response.data);
       const repo_stars = await repoStars(response.data.login);
+      const repo_forks = await repoForks(response.data.login);
       const user_orgs = await userOrgs(response.data.login);
 
       let myProfile = {
@@ -20,6 +19,7 @@ module.exports = async function getProfile(username) {
         name: response.data.name,
         public_repos: response.data.public_repos,
         repo_stars: repo_stars,
+        repo_forks: repo_forks,
         followers: response.data.followers,
         user_orgs: user_orgs,
         score: score,
@@ -27,7 +27,7 @@ module.exports = async function getProfile(username) {
       };
       return myProfile;
     })
-    .catch((err) => (error = "error"));
+    .catch((error) => (error = "error"));
   if (error == "error") {
     return error;
   } else {
@@ -45,9 +45,17 @@ async function calc(profile) {
   const public_gists = parseInt(profile.public_gists) * 5;
   const repo_stars = await repoStars(profile.login);
   const repo_stars_score = repo_stars * 5;
+  const repo_forks = await repoForks(profile.login);
+  const repo_forks_score = repo_forks * 5;
   const followers = parseInt(profile.followers) * 15;
   const score =
-    stars + orgs + public_repos + public_gists + followers + repo_stars_score;
+    stars +
+    orgs +
+    public_repos +
+    public_gists +
+    followers +
+    repo_stars_score +
+    repo_forks_score;
 
   return score;
 }
@@ -92,4 +100,24 @@ async function repoStars(profile) {
   });
 
   return totalRepoStars;
+}
+
+// Calculate Repo Forks
+async function repoForks(profile) {
+  let totalRepoForks = 0;
+  const repoForksArray = await axios
+    .get(`https://api.github.com/users/${profile}/repos?per_page=500&type=all`)
+    .then(function (res) {
+      return res.data.map((url) => {
+        return url.forks_count;
+      });
+    })
+    .catch((err) => console.log(err));
+
+  await repoForksArray.forEach((element) => {
+    totalRepoForks += parseInt(element);
+    return totalRepoForks;
+  });
+
+  return totalRepoForks;
 }
