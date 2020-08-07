@@ -5,7 +5,12 @@ const router = express.Router();
 const getProfile = require("../helper/calc");
 
 router.get("/", async (req, res) => {
-  const username = req.query.username.toString();
+  const username = req.query.query.toString();
+
+  if (!username) {
+    return res.status(404).json({ error: "NOT FOUND" });
+  }
+
   const profile = await getProfile(username);
 
   if (profile == "error") {
