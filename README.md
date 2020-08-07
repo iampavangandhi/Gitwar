@@ -93,6 +93,9 @@ You can overwrite default `Gitwar Score` text with your own label.
 # install dependencies
 npm install
 
+# serve at localhost:3000
+npm start
+
 # serve with hot reload at localhost:3000
 npm run dev
 ```
@@ -122,7 +125,7 @@ npm run dev
 
 ## Deployment
 
-### Deploy it on your own Heroku Dyno to avoid downtime.
+#### Deploy it on your own Heroku Dyno to avoid downtime.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 

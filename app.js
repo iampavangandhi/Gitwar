@@ -5,14 +5,10 @@ const express = require("express");
 const dotenv = require("dotenv");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
-const bodyParser = require("body-parser");
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-// Logging
-app.use(morgan("dev"));
 
 // EJS Middlewares
 app.set("view engine", "ejs");

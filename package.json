@@ -30,7 +30,6 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "morgan": "^1.10.0",
     "npm": "^6.14.7"
   },
   "devDependencies": {
