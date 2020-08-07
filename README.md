@@ -12,13 +12,80 @@
 
 </div>
 
-## Screenshots
+## Add Gitwar Score to GitHub profile README
 
-<div align="center">
+> ### Powered by [Shield.io](https://shields.io/)
 
-![Screenshot](./public/Screenshot.png)
+You need to add this in README.md file in your profile repository via Markdown syntax:
 
-</div>
+```markdown
+![](https://gitwar.herokuapp.com/badge?username=your-github-username)
+```
+
+> **NOTE**: Don't forget to replace example `your-github-username` parameter with real value.
+
+## Make it personal
+
+### Color
+
+You can use any valid HEX color or pick from a predefined set of named colors (`blue` is the default).
+
+| color         | demo                                                                                           |
+| ------------- | ---------------------------------------------------------------------------------------------- |
+| `brightgreen` | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=brightgreen) |
+| `green`       | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=green)       |
+| `yellow`      | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=yellow)      |
+| `yellowgreen` | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=yellowgreen) |
+| `orange`      | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=orange)      |
+| `red`         | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=red)         |
+| `blue`        | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=blue)        |
+| `grey`        | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=grey)        |
+| `lightgrey`   | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=lightgrey)   |
+| `blueviolet`  | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=blueviolet)  |
+| `ff69b4`      | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=ff69b4)      |
+
+**Named color**
+
+```markdown
+![](https://gitwar.herokuapp.com/badge?username=your-github-username&color=green)
+```
+
+**Hex color**
+
+```markdown
+![](https://gitwar.herokuapp.com/badge?username=your-github-username&color=dc143c)
+```
+
+> **NOTE**: HEX colors should be used without `#` symbol prefix.
+
+### Styles
+
+The following styles are available (`flat` is the default).
+
+| style           | demo                                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------- |
+| `plastic`       | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=007ec6&style=plastic)       |
+| `flat`          | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=007ec6&style=flat)          |
+| `flat-square`   | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=007ec6&style=flat-square)   |
+| `for-the-badge` | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=007ec6&style=for-the-badge) |
+
+```markdown
+![](https://gitwar.herokuapp.com/badge?username=your-github-username&style=flat-square)
+```
+
+### Label
+
+You can overwrite default `Gitwar Score` text with your own label.
+
+![](https://img.shields.io/static/v1?label=GITWAR+PROFILE+SCORE&message=1234567890&color=007ec6)
+
+```markdown
+![](https://komarev.com/ghpvc/?username=your-github-username&label=PROFILE+VIEWS)
+```
+
+> **NOTE**: Replace whitespace with `+` character in multi-word labels.
+
+---
 
 ## Local Setup
 
@@ -53,6 +120,16 @@ npm run dev
 
 #### Special Thanks to [Huchenme](https://github.com/huchenme) for the [Github Trending Api](https://github.com/huchenme/github-trending-api)
 
+## Deployment
+
+### Deploy it on your own Heroku Dyno to avoid downtime.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Contributing
+
+Feel free to dive in! [Open an issue](https://github.com/iampavangandhi/Gitwar/issues/new) or submit PRs
+
 ## License
 
 [MIT](LICENSE) © Pavan Gandhi
@@ -61,6 +138,6 @@ npm run dev
 
 <div align="center">
 
-### Connect me on [Linkedin](https://www.linkedin.com/in/iampavangandhi/) and Follow on [Github](https://github.com/iampavangandhi).
+### Show some ❤️ by starring 🌟 the repository!
 
 </div>

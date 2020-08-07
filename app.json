@@ -1,0 +1,6 @@
+{
+  "name": "gitwar",
+  "description": "Gitwar - Compete with Git",
+  "repository": "https://github.com/iampavangandhi/Gitwar",
+  "keywords": ["nodejs", "express", "github", "github-api", "github-profile"]
+}

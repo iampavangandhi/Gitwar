@@ -11,6 +11,9 @@ const bodyParser = require("body-parser");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// Logging
+app.use(morgan("dev"));
+
 // EJS Middlewares
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
