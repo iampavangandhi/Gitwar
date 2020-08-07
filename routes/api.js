@@ -16,7 +16,7 @@ router.get("/:username", async (req, res) => {
     return res.status(404).json({ error: "NOT FOUND" });
   }
 
-  const userProfile = {
+  res.status(200).json({
     avatar: profile.avatar,
     username: profile.username,
     name: profile.name,
@@ -27,9 +27,7 @@ router.get("/:username", async (req, res) => {
     user_orgs: profile.user_orgs,
     score: profile.score,
     url: profile.url,
-  };
-
-  res.status(200).json({ userProfile: userProfile });
+  });
 });
 
 module.exports = router;
