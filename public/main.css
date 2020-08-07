@@ -40,7 +40,6 @@ select {
   padding: 6px 12px;
   font-weight: bold;
   letter-spacing: 0.05em;
-
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -60,12 +59,10 @@ select {
 button {
   color: white;
   background-color: var(--main-bg-color);
-
   font-size: 16px;
   padding: 6px 12px;
   font-weight: bold;
   letter-spacing: 0.05em;
-
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -89,10 +86,12 @@ button:active:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
 button:hover,
 button:focus {
   text-decoration: none;
 }
+
 button:active {
   background-image: none;
   outline: 0;
@@ -101,6 +100,9 @@ button:active {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 75px;
   width: 100%;
   margin-bottom: 15px;
@@ -109,10 +111,17 @@ button:active {
   align-items: center;
 }
 
-.header h1 {
+.logo h1 {
   margin: 0;
   padding: 0;
-  margin-left: 20px;
+  margin-left: 25px;
+  color: var(--main-white-color);
+}
+
+.github h1 {
+  margin: 0;
+  padding: 0;
+  margin-right: 25px;
   color: var(--main-white-color);
 }
 
@@ -126,16 +135,11 @@ button:active {
   bottom: 0;
   height: 45px;
   width: 100%;
-  background-color: var(--main-light-grey);
+  background-color: var(--main-white-color);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.gitwar,
-.mail {
-  margin: 10px;
 }
 
 .footer a {
@@ -419,6 +423,10 @@ button:active {
 
 /* Media Query */
 @media screen and (max-width: 800px) {
+  .github {
+    display: none;
+  }
+
   .index h1 {
     color: var(--main-black-color);
     padding: 0;
@@ -436,8 +444,8 @@ button:active {
   }
 
   .footer {
-    height: 30px;
-    background-color: #f7f8fc;
+    position: static;
+    background-color: white;
   }
 
   .padd-mob {
@@ -451,11 +459,6 @@ button:active {
 
   button {
     background-color: var(--main-bg-color-2);
-  }
-
-  .gitwar,
-  .mail {
-    margin: 5px;
   }
 
   .index,
