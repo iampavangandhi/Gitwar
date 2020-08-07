@@ -51,10 +51,16 @@ npm run dev
 
 ## API Credits
 
-### Special Thanks to [Huchenme](https://github.com/huchenme) for the [Github Trending Api](https://github.com/huchenme/github-trending-api)
+#### Special Thanks to [Huchenme](https://github.com/huchenme) for the [Github Trending Api](https://github.com/huchenme/github-trending-api)
 
 ## License
 
 [MIT](LICENSE) © Pavan Gandhi
 
+---
+
+<div align="center">
+
 ### Connect me on [Linkedin](https://www.linkedin.com/in/iampavangandhi/) and Follow on [Github](https://github.com/iampavangandhi).
+
+</div>
