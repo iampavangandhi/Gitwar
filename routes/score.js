@@ -4,8 +4,8 @@ const express = require("express");
 const router = express.Router();
 const getProfile = require("../helper/calc");
 
-router.get("/", async (req, res) => {
-  const username = req.query.query.toString();
+router.get("/:username", async (req, res) => {
+  const username = req.params.username.toString();
 
   if (!username) {
     return res.status(404).json({ error: "NOT FOUND" });
