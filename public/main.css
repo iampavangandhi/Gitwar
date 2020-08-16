@@ -423,6 +423,10 @@ button:active {
   flex-direction: column;
 }
 
+.top-item-description {
+    word-break: break-word;
+}
+
 /* Media Query */
 @media screen and (max-width: 800px) {
   .github {
@@ -509,10 +513,6 @@ button:active {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-
-  .top-item-description {
-    word-break: break-all;
   }
 
   .top-item-url {
