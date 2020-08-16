@@ -55,7 +55,6 @@ You can use any valid HEX color or pick from a predefined set of named colors (`
 | `brightgreen` | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=brightgreen) |
 | `green`       | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=green)       |
 | `yellow`      | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=yellow)      |
-| `yellowgreen` | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=yellowgreen) |
 | `orange`      | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=orange)      |
 | `red`         | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=red)         |
 | `blue`        | ![](https://img.shields.io/static/v1?label=Profile+views&message=1234567890&color=blue)        |
