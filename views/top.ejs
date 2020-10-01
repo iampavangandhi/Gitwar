@@ -1,9 +1,14 @@
 <div class="top-class">
   <div class="form-class">
     <form action="/top" method="POST">
-      <h2 class="page-header">Enter Your Favorite Language and Time</h2>
-      <label>Select Language</label>
-      <select name="language" style="margin-right: 5px;">
+      <h1 class="page-header">Enter Your Favorite Language and Time</h1>
+      <label class="top-label">Select Language</label>
+      <select
+        style="outline-style: none"
+        class="top-select"
+        name="language"
+        style="margin-right: 5px"
+      >
         <option value="javascript">JavaScript</option>
         <option value="python">Python</option>
         <option value="java">Java</option>
@@ -11,14 +16,26 @@
         <option value="Go">Go</option>
       </select>
       <br />
-      <label style="margin-top: 7px;">Select Time</label>
-      <select style="margin-top: 5px;" name="time" style="margin-right: 5px;">
+      <label class="top-label" style="margin-top: 7px">Select Time</label>
+      <select
+        style="outline-style: none; margin-top: 5px"
+        class="top-select"
+        name="time"
+        style="margin-right: 5px"
+      >
         <option value="daily">Daily</option>
         <option value="weekly">Weekly</option>
         <option value="monthly">Monthly</option>
       </select>
       <br />
-      <button style="margin-top: 10px;" class="" type="submit">Search</button>
+      <button
+        class="profile-button"
+        style="margin-top: 10px"
+        class=""
+        type="submit"
+      >
+        Search
+      </button>
     </form>
   </div>
 
