@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300&display=swap");
+
 html,
 body {
   margin: 0;
@@ -8,7 +8,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 :root {
@@ -168,6 +168,21 @@ button:active {
   border-radius: 0 0 30px 30px;
 }
 
+.index-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 0px;
+}
+
+.index-item {
+  width: 20%;
+  padding: 25px;
+  border-radius: 6%;
+  border: var(--main-black-color) 3px solid;
+  box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
+}
+
 .index-item:hover {
   transform: scale(1.1);
   transition: all 0.5s ease-out;
@@ -209,6 +224,7 @@ button:active {
 
 .index h1 {
   color: var(--main-black-color);
+  font-size: 2.4rem;
   padding: 0;
   margin: 0;
 }
@@ -225,27 +241,12 @@ button:active {
   padding: 35px;
 }
 
-.index-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 25px 0px;
-}
-
-.index-item {
-  width: 20%;
-  padding: 30px;
-  border-radius: 6%;
-  border: var(--main-black-color) 3px solid;
-  box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
-}
-
 .black {
   color: var(--main-black-color);
 }
 
 .index-item h4 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .index-item h4 a {
@@ -254,11 +255,12 @@ button:active {
 }
 
 .index-item i {
-  font-size: 5rem;
+  font-size: 5.3rem;
 }
 
 .profile {
   margin: auto;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
