@@ -1,9 +1,15 @@
 <div class="profile">
   <div class="form">
     <form action="/profile" method="POST">
-      <h2 class="page-header">Enter Your Github Username</h2>
-      <input type="text" name="username" placeholder="username" value="" />
-      <button class="" type="submit">Search</button>
+      <h1 class="page-header">Enter Your Github Username</h1>
+      <input
+        class="username-input"
+        type="text"
+        name="username"
+        placeholder="username"
+        value=""
+      />
+      <button class="profile-button" type="submit">Search</button>
     </form>
   </div>
   <div class="padd"></div>
@@ -30,7 +36,7 @@
     Joined Organisations: <%= userProfile.user_orgs %>
     <br />
     <br />
-    <div class="div" style="font-weight: 600; font-size: large;">
+    <div class="div" style="font-weight: 600; font-size: large">
       Score: <%= userProfile.score %>
     </div>
     <div class="padd"></div>
