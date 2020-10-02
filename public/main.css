@@ -107,12 +107,14 @@ button:active {
   align-items: center;
   height: 75px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   background: var(--main-bg-gradient-2);
   display: flex;
   align-items: center;
 }
-
+.content {
+  margin-bottom: 75px;
+}
 .logo h1 {
   margin: 0;
   padding: 0;
@@ -493,7 +495,9 @@ button:active {
     margin-bottom: 10px;
     background: var(--main-bg-color);
   }
-
+  .content {
+    margin-bottom: 40px;
+  }
   .footer {
     position: static;
     background-color: var(--main-white);
