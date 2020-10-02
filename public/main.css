@@ -233,6 +233,17 @@ button:active {
   color: var(--main-black-color);
 }
 
+.index-item a {
+  color: var(--main-black-color);
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+.index-item i {
+  padding-top: 25px;
+  font-size: 6rem;
+}
+
 .padd {
   padding: 10px;
 }
@@ -243,19 +254,6 @@ button:active {
 
 .black {
   color: var(--main-black-color);
-}
-
-.index-item h4 {
-  font-size: 1.5rem;
-}
-
-.index-item h4 a {
-  color: var(--main-black-color);
-  text-decoration: none;
-}
-
-.index-item i {
-  font-size: 5.3rem;
 }
 
 .profile {
@@ -291,6 +289,7 @@ button:active {
   height: 30%;
   width: 20%;
   border-radius: 6%;
+  font-size: 1.1rem;
   background-color: var(--main-user-bg);
   box-shadow: 0 14px 28px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
   border: var(--main-grey-color) 2px solid;
@@ -304,6 +303,11 @@ button:active {
   padding: 0.5rem 1rem;
 }
 
+.profile-score {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
 .profile-button {
   font-size: 1.4rem;
   border-radius: 30px;
@@ -311,6 +315,7 @@ button:active {
   padding: 0.5rem 1rem;
   margin-bottom: 0.3rem;
 }
+
 .profile-button:hover {
   background-color: var(--main-white-color);
   color: var(--main-bg-color-2);
@@ -334,6 +339,7 @@ button:active {
   height: 30%;
   width: 20%;
   border-radius: 6%;
+  font-size: 1.2rem;
   background-color: var(--main-user-bg);
   box-shadow: 0 10px 20px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
   border: var(--main-grey-color) 2px solid;
@@ -404,6 +410,7 @@ button:active {
   margin: 8px;
   padding: 8px;
   font-size: 1.3rem;
+  text-align: center;
   border-radius: 5%;
   background: var(--main-bg-gradient);
   border: var(--main-black-color) 2px solid;
@@ -434,6 +441,7 @@ button:active {
   background: var(--main-bg-color-2);
   border-radius: 10px;
 }
+
 .top-item-image:hover {
   transform: scale(1.2);
   transition: all 0.5s ease;
@@ -467,6 +475,7 @@ button:active {
   font-size: 1.4rem;
   margin: 0 2%;
 }
+
 .top-select {
   border-radius: 30px;
   font-size: 1.4rem;
@@ -529,6 +538,10 @@ button:active {
     margin-bottom: 25px;
   }
 
+  .profile {
+    margin-bottom: 0px;
+  }
+
   .user-profile {
     width: 75%;
     margin: 30px;
@@ -562,6 +575,6 @@ button:active {
   }
 
   .top-item-url {
-    width: 30%;
+    width: 50%;
   }
 }
