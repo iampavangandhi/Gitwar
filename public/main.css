@@ -37,6 +37,10 @@ input {
   padding: 6px 12px;
 }
 
+.blur {
+  color: rgb(51, 51, 51);
+}
+
 select {
   font-size: 16px;
   padding: 6px 12px;
