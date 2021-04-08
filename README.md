@@ -34,7 +34,7 @@
 
 > ### Add Gitwar Score to GitHub Profile README
 > ### Badges are Powered by [Shield.io](https://shields.io/)
-> ### Check `helper/calc.js` to Know How Gitwar Score is Calculated
+> ### Check [utils/calc.js](./utils/calc.js) to Know How Gitwar Score is Calculated
 
 You need to add this in README.md file in your profile repository via Markdown syntax:
 
