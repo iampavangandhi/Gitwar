@@ -21,24 +21,23 @@
       width="140px"
       height="140px"
     />
-    <br />
+
     <h3><%= userProfile.username %></h3>
-    <%= userProfile.name != "NULL" ? userProfile.name : "Display Name: NULL" %>
-    <br />
-    Public Repos: <%= userProfile.public_repos %>
-    <br />
-    Stars on Repos: <%= userProfile.repo_stars %>
-    <br />
-    Forks on Repos: <%= userProfile.repo_forks %>
-    <br />
-    Github Followers: <%= userProfile.followers %>
-    <br />
-    Joined Organisations: <%= userProfile.user_orgs %>
-    <br />
-    <br />
+
+    <div class="user-profile-text">
+      <%= userProfile.name != "NULL" ? userProfile.name : "Display Name: NULL"
+      %>
+
+      <p>Public Repos: <%= userProfile.public_repos %></p>
+      <p>Stars on Repos: <%= userProfile.repo_stars %></p>
+      <p>Forks on Repos: <%= userProfile.repo_forks %></p>
+      <p>Github Followers: <%= userProfile.followers %></p>
+      <p>Joined Organizations: <%= userProfile.user_orgs %></p>
+    </div>
+
     <div class="profile-score">Score: <%= userProfile.score %></div>
     <div class="padd"></div>
-    <a class="user-profile-link" href="<%= userProfile.url %>">Profile Link</a>
+    <a class="user-profile-link" href="<%= userProfile.url %>">View on Github</a>
     <div class="padd"></div>
   </div>
 </div>
