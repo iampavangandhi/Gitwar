@@ -4,38 +4,10 @@ const express = require("express");
 const router = express.Router();
 const getProfile = require("../utils/calc");
 
-router.get("/", (req, res) => {
-  const userProfile1 = {
-    avatar:
-      "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png",
-    username: "NULL",
-    name: "NULL",
-    public_repos: "NULL",
-    repo_stars: "NULL",
-    repo_forks: "NULL",
-    followers: "NULL",
-    user_orgs: "NULL",
-    score: "NULL",
-    url: "NULL",
-  };
-
-  const userProfile2 = {
-    avatar:
-      "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png",
-    username: "NULL",
-    name: "NULL",
-    public_repos: "NULL",
-    repo_stars: "NULL",
-    repo_forks: "NULL",
-    followers: "NULL",
-    user_orgs: "NULL",
-    score: "NULL",
-    url: "NULL",
-  };
-
+router.get("/", (req, res) => { 
   res.status(200).render("compare", {
-    userProfile1: userProfile1,
-    userProfile2: userProfile2,
+    userProfile1: defaultProfile,
+    userProfile2: defaultProfile,
   });
 });
 

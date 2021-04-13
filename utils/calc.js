@@ -27,7 +27,10 @@ module.exports = async function getProfile(username) {
       };
       return myProfile;
     })
-    .catch((error) => (error = "error"));
+    .catch((profileError) => {
+      error = "error";
+      console.log(profileError);
+    });
   if (error == "error") {
     return error;
   } else {

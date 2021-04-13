@@ -5,20 +5,7 @@ const router = express.Router();
 const getProfile = require("../utils/calc");
 
 router.get("/", (req, res) => {
-  const userProfile = {
-    avatar:
-      "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png",
-    username: "NULL",
-    name: "NULL",
-    public_repos: "NULL",
-    repo_stars: "NULL",
-    repo_forks: "NULL",
-    followers: "NULL",
-    user_orgs: "NULL",
-    score: "NULL",
-    url: "NULL",
-  };
-  res.status(200).render("profile", { userProfile: userProfile });
+  res.status(200).render("profile", { userProfile: defaultProfile });
 });
 
 router.post("/", async (req, res) => {
@@ -46,7 +33,7 @@ router.post("/", async (req, res) => {
     url: profile.url,
   };
 
-  res.status(200).render("profile", { userProfile: userProfile });
+  res.status(200).render("profile", { userProfile });
 });
 
 module.exports = router;

@@ -6,6 +6,20 @@ const dotenv = require("dotenv");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 
+defaultProfile = {
+  avatar:
+    "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png",
+  username: "Jhon Doe",
+  name: "",
+  public_repos: "",
+  repo_stars: "",
+  repo_forks: "",
+  followers: "",
+  user_orgs: "",
+  score: "",
+  url: "",
+};
+
 // Body parser
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

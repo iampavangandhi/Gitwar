@@ -35,25 +35,23 @@
         width="125px"
         height="125px"
       />
-      <br />
+
       <h3><%= userProfile1.username %></h3>
-      Public Repos: <%= userProfile1.public_repos %>
-      <br />
-      Stars on Repos: <%= userProfile1.repo_stars %>
-      <br />
-      Forks on Repos: <%= userProfile1.repo_forks %>
-      <br />
-      Github Followers: <%= userProfile1.followers %>
-      <br />
-      Joined Organisations: <%= userProfile1.user_orgs %>
-      <br />
-      <br />
+
+      <div class="user-profile-text">
+        <p>Public Repos: <%= userProfile1.public_repos %></p>
+        <p>Stars on Repos: <%= userProfile1.repo_stars %></p>
+        <p>Forks on Repos: <%= userProfile1.repo_forks %></p>
+        <p>Github Followers: <%= userProfile1.followers %></p>
+        <p>Joined Organizations: <%= userProfile1.user_orgs %></p>
+      </div>
+
       <div id="score1" class="profile-score">
         Score: <%= userProfile1.score %>
       </div>
       <div class="padd"></div>
       <a class="user-profile-link" href="<%= userProfile1.url %>"
-        >Profile Link</a
+        >View on Github</a
       >
       <div class="padd"></div>
     </div>
@@ -66,25 +64,23 @@
         width="125px"
         height="125px"
       />
-      <br />
+
       <h3><%= userProfile2.username %></h3>
-      Public Repos: <%= userProfile2.public_repos %>
-      <br />
-      Stars on Repos: <%= userProfile2.repo_stars %>
-      <br />
-      Forks on Repos: <%= userProfile2.repo_forks %>
-      <br />
-      Github Followers: <%= userProfile2.followers %>
-      <br />
-      Joined Organisations: <%= userProfile2.user_orgs %>
-      <br />
-      <br />
+
+      <div class="user-profile-text">
+        <p>Public Repos: <%= userProfile2.public_repos %></p>
+        <p>Stars on Repos: <%= userProfile2.repo_stars %></p>
+        <p>Forks on Repos: <%= userProfile2.repo_forks %></p>
+        <p>Github Followers: <%= userProfile2.followers %></p>
+        <p>Joined Organizations: <%= userProfile2.user_orgs %></p>
+      </div>
+
       <div id="score2" class="profile-score">
         Score: <%= userProfile2.score %>
       </div>
       <div class="padd"></div>
       <a class="user-profile-link" href="<%= userProfile2.url %>"
-        >Profile Link</a
+        >View on Github</a
       >
       <div class="padd"></div>
     </div>

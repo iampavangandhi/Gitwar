@@ -31,6 +31,36 @@ body {
   --box-shadow-red: rgba(202, 30, 30, 0.25);
 }
 
+* {
+  outline: none;
+}
+
+p {
+  margin: 2px 0 2px 0;
+}
+
+/* || scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
 input {
   font-size: 16px;
   width: 55%;
@@ -180,6 +210,7 @@ button:active {
 }
 
 .index-item {
+  transition: all 0.2s ease-in-out;
   width: 20%;
   padding: 25px;
   border-radius: 6%;
@@ -189,8 +220,8 @@ button:active {
 
 .index-item:hover {
   transform: scale(1.1);
-  transition: all 0.5s ease-out;
   border: var(--main-black-color) 4px solid;
+  margin: -4px;
   box-shadow: 0 14px 28px var(--main-bg-color);
 }
 
@@ -318,6 +349,7 @@ button:active {
   border: 0.5px solid;
   padding: 0.5rem 1rem;
   margin-bottom: 0.3rem;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .profile-button:hover {
@@ -342,12 +374,22 @@ button:active {
   padding: 0;
   height: 30%;
   width: 20%;
-  border-radius: 6%;
+  border-radius: 30px;
   font-size: 1.2rem;
   background-color: var(--main-user-bg);
   box-shadow: 0 10px 20px var(--box-shadow-1), 0 10px 10px var(--box-shadow-2);
   border: var(--main-grey-color) 2px solid;
   text-align: center;
+  animation: scaleProfile 0.5s;
+}
+
+@keyframes scaleProfile {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .user-profile-image {
@@ -371,10 +413,16 @@ button:active {
   color: var(--main-white);
   background-color: var(--main-bg-color);
   box-shadow: 0 10px 20px var(--box-shadow-1), 0 4px 4px var(--box-shadow-2);
+  transition: transform 0.5s;
 }
 
 .user-profile-link:hover {
-  padding: 8px 16px;
+  transform: scale(1.1);
+}
+
+.user-profile-text {
+  text-align: left;
+  padding: 2% 24% 2% 24%;
 }
 
 .form-class {
