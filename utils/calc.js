@@ -33,9 +33,8 @@ module.exports = async function getProfile(username) {
     });
   if (error == "error") {
     return error;
-  } else {
-    return profile;
   }
+  return profile;
 };
 
 // Calculate Profile Score
