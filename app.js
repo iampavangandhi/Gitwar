@@ -2,7 +2,6 @@
 
 // Includes
 const express = require("express");
-const dotenv = require("dotenv");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 
