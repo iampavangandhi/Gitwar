@@ -4,7 +4,6 @@
 const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
-
 defaultProfile = {
   avatar:
     "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png",
@@ -49,6 +48,10 @@ app.use("/top", topRouter);
 app.use("/NULL", NullRouter);
 
 const PORT = process.env.PORT || 3000;
+
+app.get("*", (req, res) => {
+  res.redirect("/NULL");
+});
 
 // Server
 app.listen(PORT, () => {
