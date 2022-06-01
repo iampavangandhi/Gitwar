@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:username", async (req, res) => {
-  const username = req.params.username.toString();
+  const username = String(req.params.username);
   const profile = await getProfile(username);
 
   if (profile == "error") {
