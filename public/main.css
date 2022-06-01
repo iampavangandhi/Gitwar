@@ -193,6 +193,8 @@ button:active {
   text-align: center;
   flex-direction: column;
   align-items: center;
+
+  padding-bottom: 120px;
 }
 
 .index-main-cards {
@@ -255,6 +257,8 @@ button:active {
   text-align: center;
   flex-direction: column;
   align-items: center;
+
+  padding-bottom: 75px;
 }
 
 .index h1 {

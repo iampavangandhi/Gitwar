@@ -9,11 +9,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  if (!req.body.username) {
-    return res.status(400).render("error");
-  }
-
-  const username = req.body.username.toString();
+  const username = String(req.body.username);
   const profile = await getProfile(username);
 
   if (profile == "error") {
@@ -32,7 +28,6 @@ router.post("/", async (req, res) => {
     score: profile.score,
     url: profile.url,
   };
-
   res.status(200).render("profile", { userProfile });
 });
 

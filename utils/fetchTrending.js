@@ -1,5 +1,5 @@
+const axios = require("axios").default;
 const cheerio = require("cheerio");
-const fetch = require("node-fetch");
 const { omitBy, isNil } = require("lodash");
 
 const GITHUB_URL = "https://github.com";
@@ -23,9 +23,10 @@ async function fetchRepositories({
   const url = `${GITHUB_URL}/trending/${encodeURIComponent(
     language
   )}?since=${since}&spoken_language_code=${encodeURIComponent(spokenLanguage)}`;
-  const data = await fetch(url);
-  const $ = cheerio.load(await data.text());
-  return $(".Box article.Box-row")
+  const response = await axios.get(url);
+  const data = response.data;
+  const $ = cheerio.load(data);
+  return $("article.Box-row")
     .get()
 
     .map((repo) => {
