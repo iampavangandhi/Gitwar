@@ -12,10 +12,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  if (!req.body.username1 || !req.body.username2) {
-    return res.status(400).render("error");
-  }
-
   const user1 = req.body.username1.toString();
   const user2 = req.body.username2.toString();
   const profile1 = await getProfile(user1);
