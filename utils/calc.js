@@ -7,23 +7,24 @@ module.exports = async function getProfile(username) {
   let error;
   const profile = await axios
     .get(`https://api.github.com/users/${username}`)
+    .then(response => response.data)
     .then(async function (response) {
-      const score = await calc(response.data);
-      const repo_stars = await repoStars(response.data.login);
-      const repo_forks = await repoForks(response.data.login);
-      const user_orgs = await userOrgs(response.data.login);
+      const score = await calc(response);
+      const repo_stars = await repoStars(response.login);
+      const repo_forks = await repoForks(response.login);
+      const user_orgs = await userOrgs(response.login);
 
       let myProfile = {
-        avatar: response.data.avatar_url,
-        username: response.data.login,
-        name: response.data.name,
-        public_repos: response.data.public_repos,
+        avatar: response.avatar_url,
+        username: response.login,
+        name: response.name,
+        public_repos: response.public_repos,
         repo_stars: repo_stars,
         repo_forks: repo_forks,
-        followers: response.data.followers,
+        followers: response.followers,
         user_orgs: user_orgs,
         score: score,
-        url: response.data.html_url,
+        url: response.html_url,
       };
       return myProfile;
     })
