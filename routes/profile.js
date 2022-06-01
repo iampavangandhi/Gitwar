@@ -9,28 +9,26 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  if (req.body.username) {
-    const username = String(req.body.username);
-    const profile = await getProfile(username);
-  
-    if (profile == "error") {
-      return res.status(404).render("error");
-    }
-  
-    const userProfile = {
-      avatar: profile.avatar,
-      username: profile.username,
-      name: profile.name,
-      public_repos: profile.public_repos,
-      repo_stars: profile.repo_stars,
-      repo_forks: profile.repo_forks,
-      followers: profile.followers,
-      user_orgs: profile.user_orgs,
-      score: profile.score,
-      url: profile.url,
-    };
-    res.status(200).render("profile", { userProfile });
+  const username = String(req.body.username);
+  const profile = await getProfile(username);
+
+  if (profile == "error") {
+    return res.status(404).render("error");
   }
+
+  const userProfile = {
+    avatar: profile.avatar,
+    username: profile.username,
+    name: profile.name,
+    public_repos: profile.public_repos,
+    repo_stars: profile.repo_stars,
+    repo_forks: profile.repo_forks,
+    followers: profile.followers,
+    user_orgs: profile.user_orgs,
+    score: profile.score,
+    url: profile.url,
+  };
+  res.status(200).render("profile", { userProfile });
 });
 
 module.exports = router;
