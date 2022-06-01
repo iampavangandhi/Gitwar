@@ -6,15 +6,13 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  if (!req.query) {
+  if (Object.keys(req.query).length === 0) {
     res
       .status(404)
       .redirect("https://img.shields.io/badge/Gitwar%20Score-NULL-red");
   }
 
-  console.log(req.query);
-
-  const username = req.query.username.toString();
+  const username = String(req.query.username);
 
   const label = req.query.label || "Gitwar Score";
   const style = req.query.style || "flat";
