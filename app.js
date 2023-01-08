@@ -2,7 +2,6 @@
 
 // Includes
 const express = require("express");
-const serverless = require("serverless-http");
 const dotenv = require("dotenv");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
@@ -58,5 +57,7 @@ if (!process.env.GITHUB_TOKEN) {
   throw "No Github Token provided in environment Variables! Please provide GITHUB_TOKEN!"
 }
 
-// Serverless functions (Netlify integration)
-module.exports.handler = serverless(app)
+// Server
+app.listen(PORT, () => {
+  console.log(`Server is up and running at Port ${PORT}`);
+});
