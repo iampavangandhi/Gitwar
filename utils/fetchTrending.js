@@ -1,5 +1,5 @@
 const cheerio = require("cheerio");
-const fetch = import("node-fetch");
+const fetch = require("node-fetch");
 const { omitBy, isNil } = require("lodash");
 
 const GITHUB_URL = "https://github.com";
