@@ -2,6 +2,8 @@
 
 const axios = require("axios");
 
+axios.defaults.headers.common['Authorization'] = "Bearer " + process.env.GITHUB_TOKEN
+
 // Get Profile
 module.exports = async function getProfile(username) {
   let error;

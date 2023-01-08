@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     spokenLanguage: "english",
   });
 
-  await data.map(function await(elem) {
+  await data.map(function (elem) {
     names[index] = {
       avatar: elem.avatar,
       name: elem.name,
@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
     spokenLanguage: "english",
   });
 
-  await data.map(function await(elem) {
+  await data.map(function (elem) {
     names[index] = {
       avatar: elem.avatar,
       name: elem.name,
