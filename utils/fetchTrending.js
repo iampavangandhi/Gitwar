@@ -1,17 +1,17 @@
-const cheerio = require("cheerio");
 const axios = require("axios");
+const cheerio = require("cheerio");
 const { omitBy, isNil } = require("lodash");
 
-function omitNil(object) {
+const omitNil = (object) => {
   return omitBy(object, isNil);
-}
+};
 
-function removeDefaultAvatarSize(src) {
+const removeDefaultAvatarSize = (src) => {
   if (!src) {
     return src;
   }
   return src.replace(/\?s=.*$/, "");
-}
+};
 
 async function fetchRepositories({
   language = "",
@@ -23,7 +23,7 @@ async function fetchRepositories({
   )}?since=${since}&spoken_language_code=${encodeURIComponent(spokenLanguage)}`;
 
   const data = await axios.get(url);
-  const $ = cheerio.load(await data.text());
+  const $ = cheerio.load(data?.data);
   return $(".Box article.Box-row")
     .get()
 
@@ -43,7 +43,7 @@ async function fetchRepositories({
           const avatarUrl = $(user).children("img").attr("src");
           return {
             username: altString ? altString.slice(1) : null,
-            href: `${GITHUB_URL}${user.attribs.href}`,
+            href: `https://github.com${user?.attribs?.href}`,
             avatar: removeDefaultAvatarSize(avatarUrl),
           };
         })
@@ -61,8 +61,8 @@ async function fetchRepositories({
       return omitNil({
         author: username,
         name: repoName,
-        avatar: `${GITHUB_URL}/${username}.png`,
-        url: `${GITHUB_URL}${relativeUrl}`,
+        avatar: `https://github.com/${username}.png`,
+        url: `https://github.com${relativeUrl}`,
         description: $repo.find("p.my-1").text().trim() || "",
         language: lang,
         languageColor: langColor,

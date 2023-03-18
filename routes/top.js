@@ -1,5 +1,4 @@
 // Top Route
-
 const express = require("express");
 const router = express.Router();
 
@@ -14,7 +13,7 @@ router.get("/", async (req, res) => {
     spokenLanguage: "english",
   });
 
-  await data.map(function await(elem) {
+  await data.map((elem) => {
     names[index] = {
       avatar: elem.avatar,
       name: elem.name,
@@ -40,7 +39,7 @@ router.post("/", async (req, res) => {
     spokenLanguage: "english",
   });
 
-  await data.map(function await(elem) {
+  await data.map((elem) => {
     names[index] = {
       avatar: elem.avatar,
       name: elem.name,
