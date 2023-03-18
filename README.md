@@ -6,7 +6,7 @@
 
 ![Version](https://img.shields.io/github/package-json/v/iampavangandhi/Gitwar?color=2948ff&label=Version&style=flat-square) ![License](https://img.shields.io/github/license/iampavangandhi/Gitwar?color=2948ff&label=License&style=flat-square) ![Deployment](https://img.shields.io/github/deployments/iampavangandhi/Gitwar/gitwar?color=2948ff&label=Deployment&style=flat-square) ![Repo Size](https://img.shields.io/github/repo-size/iampavangandhi/Gitwar?color=2948ff&label=Repo%20Size&style=flat-square)
 
-## Website : https://gitwar.herokuapp.com/
+## Website : https://gitwar.up.railway.app
 
 ---
 
