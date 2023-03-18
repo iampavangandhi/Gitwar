@@ -1,30 +1,26 @@
-// Main File
-
-// Includes
+require("dotenv").config();
 const express = require("express");
-const dotenv = require("dotenv");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 
 defaultProfile = {
-  avatar:
-    "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/130-512.png",
-  username: "Jhon Doe",
-  name: "",
-  public_repos: "",
-  repo_stars: "",
-  repo_forks: "",
-  followers: "",
-  user_orgs: "",
-  score: "",
-  url: "",
+  avatar: "https://avatars.githubusercontent.com/u/42767012?v=4",
+  username: "iampavangandhi",
+  name: "Pavan Gandhi",
+  public_repos: "92",
+  repo_stars: "517",
+  repo_forks: "377",
+  followers: "165",
+  user_orgs: "6",
+  score: "9915",
+  url: "https://github.com/iampavangandhi",
 };
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// EJS Middlewares
+// EJS Middleware
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
@@ -53,5 +49,5 @@ const PORT = process.env.PORT || 3000;
 
 // Server
 app.listen(PORT, () => {
-  console.log(`Server is up and running at Port ${PORT}`);
+  console.log(`Server is up and running at Port: ${PORT}`);
 });
