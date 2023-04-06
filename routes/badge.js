@@ -12,8 +12,6 @@ router.get("/", async (req, res) => {
       .redirect("https://img.shields.io/badge/Gitwar%20Score-NULL-red");
   }
 
-  console.log(req.query);
-
   const username = req.query.username.toString();
 
   const label = req.query.label || "Gitwar Score";

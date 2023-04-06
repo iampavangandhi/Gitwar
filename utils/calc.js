@@ -1,110 +1,114 @@
 // Calculate Score
-
 const axios = require("axios");
 
 axios.defaults.headers.common['Authorization'] = "Bearer " + process.env.GITHUB_TOKEN
 
-// Get Profile
-module.exports = async function getProfile(username) {
-  let error;
-  const profile = await axios
-    .get(`https://api.github.com/users/${username}`)
-    .then(async function (response) {
-      const scorePlus = await calc(response.data);
-      const [score, repo_stars, repo_forks, user_orgs] = [scorePlus.score, scorePlus.repo_stars, scorePlus.repo_forks, scorePlus.org];
+const getProfile = async (username = "iampavangandhi") => {
+  try {
+    const { data } = await axios.get(
+      `https://api.github.com/users/${username}`
+    );
+    const score = await calculateScore(data);
+    const user_orgs = await userOrgs(data?.login);
+    const { totalRepoStars: repo_stars, totalRepoForks: repo_forks } =
+      await getRepoStarsAndForks(data?.login);
 
-      let myProfile = {
-        avatar: response.data.avatar_url,
-        username: response.data.login,
-        name: response.data.name,
-        public_repos: response.data.public_repos,
-        repo_stars: repo_stars,
-        repo_forks: repo_forks,
-        followers: response.data.followers,
-        user_orgs: user_orgs,
-        score: score,
-        url: response.data.html_url,
-      };
-      return myProfile;
-    })
-    .catch((profileError) => {
-      error = "error";
-      console.log(profileError);
-    });
-  if (error == "error") {
-    return error;
-  } else {
-    return profile;
+    let myProfile = {
+      avatar: data?.avatar_url,
+      username: data?.login,
+      name: data?.name,
+      public_repos: data?.public_repos,
+      repo_stars: repo_stars,
+      repo_forks: repo_forks,
+      followers: data?.followers,
+      user_orgs: user_orgs,
+      score: score,
+      url: data?.html_url,
+    };
+    return myProfile;
+  } catch (error) {
+    console.log("Error in getProfile");
+    throw new Error(error);
   }
 };
 
 // Calculate Profile Score
-async function calc(profile) {
-  const star = await starredRepos(profile.login);
-  const stars = parseInt(star) * 5;
-  const org = await userOrgs(profile.login);
-  const orgs = parseInt(org) * 50;
-  const public_repos = parseInt(profile.public_repos) * 10;
-  const public_gists = parseInt(profile.public_gists) * 5;
-  const [repo_stars, repo_forks] = await repoStarsAndForks(profile.login);
-  const repo_stars_score = repo_stars * 5;
-  const repo_forks_score = repo_forks * 5;
-  const followers = parseInt(profile.followers) * 15;
-  const score =
-    stars +
-    orgs +
-    public_repos +
-    public_gists +
-    followers +
-    repo_stars_score +
-    repo_forks_score;
+const calculateScore = async (profile) => {
+  try {
+    const star = await staredRepos(profile?.login);
+    const org = await userOrgs(profile?.login);
+    const { totalRepoStars: repo_stars, totalRepoForks: repo_forks } =
+      await getRepoStarsAndForks(data?.login);
 
-  return {score, star, org, repo_stars, repo_forks}; // reduce api calls by passing pre-called items
-}
+    const orgs = Number(org) * 50;
+    const stars = Number(star) * 5;
+    const repoStarsScore = Number(repo_stars) * 5;
+    const repoForksScore = Number(repo_forks) * 5;
+    const followers = Number(profile?.followers) * 15;
+    const publicRepos = Number(profile?.public_repos) * 10;
+    const publicGists = Number(profile?.public_gists) * 5;
+
+    const score =
+      stars +
+      orgs +
+      publicRepos +
+      publicGists +
+      repoStarsScore +
+      repoForksScore +
+      followers;
+
+    return score;
+  } catch (error) {
+    console.log("Error in calculateScore");
+    throw new Error(error);
+  }
+};
 
 // Calculate Orgs
-async function userOrgs(profile) {
-  const orgs = await axios
-    .get(`https://api.github.com/users/${profile}/orgs`)
-    .then(function (res) {
-      return res.data.length;
-    })
-    .catch((err) => console.log(err));
-  return orgs;
-}
+const userOrgs = async (profile) => {
+  try {
+    const orgs = await axios.get(
+      `https://api.github.com/users/${profile}/orgs`
+    );
+    return orgs?.data?.length;
+  } catch (error) {
+    console.log("Error in userOrgs");
+    throw new Error(error);
+  }
+};
 
-// Calculate Starred Repos
-async function starredRepos(profile) {
-  const star = await axios
-    .get(`https://api.github.com/users/${profile}/starred`)
-    .then(function (res) {
-      return res.data.length;
-    })
-    .catch((err) => console.log(err));
-  return star;
-}
+// Calculate Stared Repos
+const staredRepos = async (profile) => {
+  try {
+    const star = await axios.get(
+      `https://api.github.com/users/${profile}/starred`
+    );
 
-// Calculate Repo Stars and Forks, combined to reduce api calls
-async function repoStarsAndForks(profile) {
-  let totalRepoStars = 0;
-  let totalRepoForks = 0;
+    return star.data?.length;
+  } catch (error) {
+    console.log("Error in staredRepos");
+    throw new Error(error);
+  }
+};
 
-  const [repoStarsArray, repoForksArray] = await axios
-    .get(`https://api.github.com/users/${profile}/repos?per_page=500&type=all`)
-    .then(function (res) {
-      return res.data.map((url) => {
-        return [url.stargazers_count, url.forks_count];
-      });
-    })
-    .catch((err) => console.log(err));
+// Calculate Repo Stars & Forks
+const getRepoStarsAndForks = async (profile) => {
+  try {
+    let totalRepoStars = 0;
+    let totalRepoForks = 0;
+    const userRepos = await axios.get(
+      `https://api.github.com/users/${profile}/repos?per_page=500&type=all`
+    );
+    userRepos?.forEach((repo) => {
+      totalRepoStars += Number(repo?.stargazers_count);
+      totalRepoForks += Number(repo?.forks_count);
+    });
+    return { totalRepoStars, totalRepoForks };
+  } catch (error) {
+    console.log("Error in getRepoStarsAndForks");
+    throw new Error(error);
+  }
+};
 
-  await repoStarsArray.forEach((element) => {
-    totalRepoStars += parseInt(element);
-  });
-
-  await repoForksArray.forEach((element) => {
-    totalRepoForks += parseInt(element);
-  });
-
-  return [totalRepoStars, totalRepoForks];
-}
+// Get Profile
+module.exports = getProfile;
