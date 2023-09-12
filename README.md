@@ -1,5 +1,9 @@
 <div align="center">
 
+# ⚠️ NOT ACTIVELY MAINTAINED
+
+---
+
 ![logo](./public/logo.png)
 
 # **Gitwar - Compete with Github**
