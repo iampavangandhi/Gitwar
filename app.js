@@ -47,6 +47,12 @@ app.use("/NULL", NullRouter);
 
 const PORT = process.env.PORT || 3000;
 
+if (!process.env.GITHUB_TOKEN) {
+  // Unauthorized github requests have a rate limit 
+  // of 60/hour, which is borderline unusable
+  throw "No Github Token provided in environment Variables! Please provide GITHUB_TOKEN!"
+}
+
 // Server
 app.listen(PORT, () => {
   console.log(`Server is up and running at Port: ${PORT}`);
